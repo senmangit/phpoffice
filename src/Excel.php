@@ -211,7 +211,7 @@ class Excel
         header("Content-Transfer-Encoding:binary");
 
         // 用户下载excel
-        $objWriter = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
+        $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
         $objWriter->save('php://output');
         // 保存excel在服务器上
         //$objWriter = new PHPExcel_Writer_Excel2007($excel);

@@ -23,16 +23,15 @@
     "ext-mbstring": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
-    "phpoffice/phpexcel":"*"
+    "phpoffice/phpexcel": "*"
   },
-
-    "recommend": {
-        "ext-zip": "*",
-        "ext-gd": "*"
-    },
-    "autoload": {
-        "psr-4": {
-            "Excel\\": "src/Excel/"
-        }
+  "recommend": {
+    "ext-zip": "*",
+    "ext-gd": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Excel\\": "src/Excel/"
     }
+  }
 }

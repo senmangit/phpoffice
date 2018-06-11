@@ -23,7 +23,7 @@
     "ext-mbstring": "*",
     "ext-xml": "*",
     "ext-xmlwriter": "*",
-    "phpoffice/phpexcel":"*"
+    "phpoffice/phpspreadsheet":"*"
   },
 
   "recommend": {

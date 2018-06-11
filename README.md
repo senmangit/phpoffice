@@ -1,3 +1,3 @@
-# php-excel
+# phpexcel
 
-基于PHPexcel封装的组件。
+基于phpspreadsheet封装的excel组件封装的组件。

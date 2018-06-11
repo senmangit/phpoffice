@@ -109,26 +109,25 @@ class Excel
             //设置表头字体是否加粗
             $objActSheet->getStyle("$letter[$i]1")->getFont()->setBold(true);
             //设置表头文字垂直居中
-            $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
+           $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
             //设置align
             $objPHPExcel->getActiveSheet()->getStyle('D11')->getAlignment()->setHorizontal(Alignment::HORIZONTAL_RIGHT);
 
             //设置文字上下居中
-            $objActSheet->getStyle($letter[$i])->getAlignment()->setVertical();
+        //   $objActSheet->getStyle($letter[$i])->getAlignment()->setVertical();//与下一行冲突
             //设置表头外的文字垂直居中
-            $objPHPExcel->setActiveSheetIndex(0)->getStyle($letter[$i])->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
+           $objPHPExcel->setActiveSheetIndex(0)->getStyle($letter[$i])->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
 
             //设置border的颜色
-            $objPHPExcel->getActiveSheet()->getStyle('D13')->getBorders()->getLeft()->getColor()->setARGB('FF993300');
-            $objPHPExcel->getActiveSheet()->getStyle('D13')->getBorders()->getTop()->getColor()->setARGB('FF993300');
+            //$objPHPExcel->getActiveSheet()->getStyle('D13')->getBorders()->getLeft()->getColor()->setARGB('FF993300');
 
             //填充颜色
-            $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->setFillType(Fill::FILL_SOLID);
-            $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->getStartColor()->setARGB('FF808080');
+          //  $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->setFillType(Fill::FILL_SOLID);
+           // $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->getStartColor()->setARGB('FF808080');
 
             //保护cell
-            $objPHPExcel->getActiveSheet()->getProtection()->setSheet(true); // Needs to be set to true in order to enable any worksheet protection!
-            $objPHPExcel->getActiveSheet()->protectCells('A3:E13', 'PHPExcel');
+            //    $objPHPExcel->getActiveSheet()->getProtection()->setSheet(true); // Needs to be set to true in order to enable any worksheet protection!
+            //    $objPHPExcel->getActiveSheet()->protectCells('A3:E13', '123456');
 
         }
 

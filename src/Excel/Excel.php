@@ -6,7 +6,7 @@
  * Time: 17:56
  */
 
-namespace excel;
+namespace Eexcel\excel;
 
 
 class Excel

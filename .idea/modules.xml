@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/yii2-rbac.iml" filepath="$PROJECT_DIR$/.idea/yii2-rbac.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PHPExcel.iml" filepath="$PROJECT_DIR$/.idea/PHPExcel.iml" />
     </modules>
   </component>
 </project>

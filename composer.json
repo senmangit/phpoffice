@@ -1,9 +1,8 @@
 {
-  "name": "senman/yii2-PHPExcel",
-  "description": "基于PHPexcel封装得YII2组件",
+  "name": "senman/PHPExcel",
+  "description": "基于PHPexcel封装得组件",
   "license": "MIT",
   "keywords": [
-    "yii2",
     "excel",
     "php",
     "export"
@@ -16,7 +15,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/senmangit/yii2-PHPExcel"
+    "issues": "https://github.com/senmangit/PHPExcel"
   },
   "minimum-stability": "dev",
   "require": {
@@ -34,8 +33,8 @@
   },
   "autoload": {
     "psr-0": {
-      "eXcel": "src/",
-      "PHPExcel": "PHPExcel/Classes/"
+      "Excel//excel//": "src/",
+      "PHPExcel//": "PHPExcel/Classes/"
     }
   }
 }

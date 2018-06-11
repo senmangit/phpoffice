@@ -1,6 +1,6 @@
 {
   "name": "senman/PHPExcel",
-  "description": "基于PHPexcel封装得组件",
+  "description": "基于PHPexcel封装的excel组件",
   "license": "MIT",
   "keywords": [
     "excel",
@@ -22,19 +22,17 @@
     "php": "^5.2|^7.0",
     "ext-mbstring": "*",
     "ext-xml": "*",
-    "ext-xmlwriter": "*"
+    "ext-xmlwriter": "*",
+    "phpoffice/phpexcel":"*"
   },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "2.*"
-  },
+
   "recommend": {
     "ext-zip": "*",
     "ext-gd": "*"
   },
   "autoload": {
-    "psr-0": {
-      "Excel//excel//": "src/",
-      "PHPExcel//": "PHPExcel/Classes/"
+    "psr-4": {
+      "Excel\\": "src/Excel/"
     }
   }
 }

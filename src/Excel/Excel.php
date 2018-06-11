@@ -6,25 +6,22 @@
  * Time: 17:56
  */
 
-namespace Eexcel\excel;
-
+namespace Excel;
 
 class Excel
 {
 
     // $tableheader = array('会员账号', '金额', '收款信息', '类型', '处理状态', '处理时间', '申请时间');
     // $sheetname ="测试";
-    // $savefile ="保存得文件名";
-    function export($data, $savefile, $fileheader, $sheetname, $properties = [])
+    // $savefile ="保存的文件名";
+    function export($data, $file_name, $fileheader, $sheetname, $is_save = 0, $save_path = "", $properties = [])
     {
-
-
         $objPHPExcel = new \PHPExcel();
-        if (is_null($savefile)) {
-            $savefile = time();
+        if (is_null($file_name)) {
+            $file_name = time();
         } else {
             //防止中文命名，下载时ie9及其他情况下的文件名称乱码
-            iconv('UTF-8', 'GB2312', $savefile);
+            iconv('UTF-8', 'GB2312', $file_name);
         }
 
         // 设置excel的属性：
@@ -197,26 +194,41 @@ class Excel
             //设置单元格高度，暂时没有找到统一设置高度方法
             //$objActSheet->getRowDimension($i)->setRowHeight('80px');
         }
-        ob_end_clean();
-        //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
-        header('Content-Disposition: attachment;filename="' . $savefile . '.xlsx"');
-        header('Cache-Control: max-age=0');
-        header("Pragma: public");
-        header("Expires: 0");
-        header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
-        header("Content-Type:application/force-download");
-        header("Content-Type:application/vnd.ms-execl");
-        header("Content-Type:application/octet-stream");
-        header("Content-Type:application/download");;
-        header("Content-Transfer-Encoding:binary");
 
-        // 用户下载excel
-        $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-        $objWriter->save('php://output');
-        // 保存excel在服务器上
-        //$objWriter = new PHPExcel_Writer_Excel2007($excel);
-        //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
-        //$objWriter->save("保存的文件地址/".$savefile);
+
+        if ($is_save) {
+            if (!empty($save_path)) {
+                //判断目录是否存在,不存在则创建
+                if (!file_exists($save_path)) {
+                    mkdir($save_path, '0777', true);
+                }
+                // 保存excel在服务器上
+                $objWriter = new \PHPExcel_Writer_Excel2007($objPHPExcel);
+                //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
+                $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
+            } else {
+                throw new \Exception("路径不存在");
+            }
+        } else {
+
+            ob_end_clean();
+            //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
+            header('Content-Disposition: attachment;filename="' . $file_name . '"');
+            header('Cache-Control: max-age=0');
+            header("Pragma: public");
+            header("Expires: 0");
+            header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
+            header("Content-Type:application/force-download");
+            header("Content-Type:application/vnd.ms-execl");
+            header("Content-Type:application/octet-stream");
+            header("Content-Type:application/download");;
+            header("Content-Transfer-Encoding:binary");
+            // 用户下载excel
+            $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+            $objWriter->save('php://output');
+        }
+
+
     }
 
 

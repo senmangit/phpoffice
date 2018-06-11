@@ -178,7 +178,7 @@ class Excel
                     if ($value != '') {
                         $value = iconv("UTF-8", "GB2312", $value); //防止中文命名的文件
                         // 图片生成
-                        $objDrawing[$key] = new \PHPExcel_Worksheet_Drawing();
+                        $objDrawing[$key] = new \ImagickDraw();
                         // 图片地址
                         $objDrawing[$key]->setPath('.\Uploads' . $value);
                         // 设置图片宽度高度

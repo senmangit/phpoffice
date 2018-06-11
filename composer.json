@@ -1,38 +1,38 @@
 {
-  "name": "senman/phpexcel",
-  "description": "基于PHPexcel封装的excel组件",
-  "license": "MIT",
-  "keywords": [
-    "excel",
-    "php",
-    "export"
-  ],
-  "homepage": "https://www.monqin.com",
-  "authors": [
-    {
-      "name": "senman",
-      "email": "417131405@qq.com"
-    }
-  ],
-  "support": {
-    "issues": "https://github.com/senmangit/phpexcel"
-  },
-  "minimum-stability": "dev",
-  "require": {
-    "php": ">=5.6",
-    "ext-mbstring": "*",
-    "ext-xml": "*",
-    "ext-xmlwriter": "*",
-    "phpoffice/phpexcel":"*"
-  },
+    "name": "senman/phpexcel",
+    "description": "基于PHPexcel封装的excel组件",
+    "license": "MIT",
+    "keywords": [
+        "excel",
+        "php",
+        "export"
+    ],
+    "homepage": "https://www.monqin.com",
+    "authors": [
+        {
+            "name": "senman",
+            "email": "417131405@qq.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/senmangit/phpexcel"
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6",
+        "ext-mbstring": "*",
+        "ext-xml": "*",
+        "ext-xmlwriter": "*",
+        "phpoffice/phpspreadsheet":"*"
+    },
 
-  "recommend": {
-    "ext-zip": "*",
-    "ext-gd": "*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Excel\\": "src/Excel/"
+    "recommend": {
+        "ext-zip": "*",
+        "ext-gd": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Excel\\": "src/Excel/"
+        }
     }
-  }
 }

@@ -8,6 +8,11 @@
 
 namespace Excel;
 
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Style\Alignment;
+use PhpOffice\PhpSpreadsheet\Style\Fill;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 class Excel
 {
 
@@ -16,7 +21,8 @@ class Excel
     // $savefile ="保存的文件名";
     function export($data, $file_name, $fileheader, $sheetname, $is_save = 0, $save_path = "", $properties = [])
     {
-        $objPHPExcel = new \PHPExcel();
+        $objPHPExcel = new Spreadsheet();
+        //$objPHPExcel = new \PHPExcel();
         if (is_null($file_name)) {
             $file_name = time();
         } else {
@@ -103,21 +109,21 @@ class Excel
             //设置表头字体是否加粗
             $objActSheet->getStyle("$letter[$i]1")->getFont()->setBold(true);
             //设置表头文字垂直居中
-            $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+            $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
             //设置align
-            $objPHPExcel->getActiveSheet()->getStyle('D11')->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_RIGHT);
+            $objPHPExcel->getActiveSheet()->getStyle('D11')->getAlignment()->setHorizontal(Alignment::HORIZONTAL_RIGHT);
 
             //设置文字上下居中
-            $objActSheet->getStyle($letter[$i])->getAlignment()->setVertical(\PHPExcel_Style_Alignment::VERTICAL_CENTER);
+            $objActSheet->getStyle($letter[$i])->getAlignment()->setVertical();
             //设置表头外的文字垂直居中
-            $objPHPExcel->setActiveSheetIndex(0)->getStyle($letter[$i])->getAlignment()->setHorizontal(\PHPExcel_Style_Alignment::HORIZONTAL_CENTER);
+            $objPHPExcel->setActiveSheetIndex(0)->getStyle($letter[$i])->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
 
             //设置border的颜色
             $objPHPExcel->getActiveSheet()->getStyle('D13')->getBorders()->getLeft()->getColor()->setARGB('FF993300');
             $objPHPExcel->getActiveSheet()->getStyle('D13')->getBorders()->getTop()->getColor()->setARGB('FF993300');
 
             //填充颜色
-            $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->setFillType(\PHPExcel_Style_Fill::FILL_SOLID);
+            $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->setFillType(Fill::FILL_SOLID);
             $objPHPExcel->getActiveSheet()->getStyle('B1')->getFill()->getStartColor()->setARGB('FF808080');
 
             //保护cell
@@ -203,7 +209,8 @@ class Excel
                     mkdir($save_path, '0777', true);
                 }
                 // 保存excel在服务器上
-                $objWriter = new \PHPExcel_Writer_Excel2007($objPHPExcel);
+                //$objWriter = new \PHPExcel_Writer_Excel2007($objPHPExcel);
+                $objWriter = new Xlsx($objPHPExcel);
                 //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
                 $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
             } else {
@@ -224,7 +231,7 @@ class Excel
             header("Content-Type:application/download");;
             header("Content-Transfer-Encoding:binary");
             // 用户下载excel
-            $objWriter = \PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+            $objWriter = new Xlsx($objPHPExcel);
             $objWriter->save('php://output');
         }
 

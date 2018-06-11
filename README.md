@@ -1,3 +1,3 @@
-# yii2-rbac-manager
+# php-excel
 
-基于PHPexcel封装得YII2组件。
+基于PHPexcel封装的组件。

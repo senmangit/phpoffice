@@ -10,8 +10,6 @@ namespace Excel;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Color;
-use PhpOffice\PhpSpreadsheet\Style\Fill;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Excel
@@ -21,7 +19,7 @@ class Excel
     // $sheetname ="测试";
     // $savefile ="保存的文件名";
     //$data_style 数据的格式
-    function export($data, $file_name, $fileheader, $sheetname, $is_save = 0, $save_path = "", $properties = [], $data_style = [])
+    function export($data, $file_name, $fileheader, $sheetname, $is_save = 0, $save_path = "./", $properties = [], $data_style = [])
     {
         $objPHPExcel = new Spreadsheet();
         //$objPHPExcel = new \PHPExcel();
@@ -84,20 +82,28 @@ class Excel
 
         //根据有生成的excel多少列，$letter长度要大于等于这个值
         // $letter = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
-        $letter = [];
         $header_count = count($fileheader);//获取头数量
-        for ($i = 65; $i < 91; $i++) {
-            if (count($letter) == $header_count) {
-                break;
-            } else {
-                $letter[] = strtoupper(chr($i));//存入大写字母
-            }
-        }
+        $letter = $this->getTableHeader($header_count);
         //设置当前的sheet
         $objPHPExcel->setActiveSheetIndex(0);
 
+
+        /**
+         *         const COLOR_BLACK = 'FF000000';
+         * const COLOR_WHITE = 'FFFFFFFF';
+         * const COLOR_RED = 'FFFF0000';
+         * const COLOR_DARKRED = 'FF800000';
+         * const COLOR_BLUE = 'FF0000FF';
+         * const COLOR_DARKBLUE = 'FF000080';
+         * const COLOR_GREEN = 'FF00FF00';
+         * const COLOR_DARKGREEN = 'FF008000';
+         * const COLOR_YELLOW = 'FFFFFF00';
+         * const COLOR_DARKYELLOW = 'FF808000';
+         */
+
+
         //设置表头数据格式
-        for ($i = 0; $i < count($fileheader); $i++) {
+        for ($i = 0; $i < $header_count; $i++) {
 
             //设置表头值，这里的setCellValue第二个参数不能使用iconv，否则excel中显示false
             $objActSheet->setCellValue("$letter[$i]1", $fileheader[$i]['title']);
@@ -105,37 +111,41 @@ class Excel
             //设置表头字体大小
             if (isset($fileheader[$i]['font_size'])) {
                 $objActSheet->getStyle("$letter[$i]1")->getFont()->setSize($fileheader[$i]['font_size']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]1")->getFont()->setSize(12);
             }
+//            else {
+//                $objActSheet->getStyle("$letter[$i]1")->getFont()->setSize(12);
+//            }
 
             //设置表头字体样式
             if (isset($fileheader[$i]['font_name'])) {
                 $objActSheet->getStyle("$letter[$i]1")->getFont()->setName($fileheader[$i]['font_name']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]1")->getFont()->setName("微软雅黑");
             }
+//            else {
+//                $objActSheet->getStyle("$letter[$i]1")->getFont()->setName("微软雅黑");
+//            }
 
             //设置表头文字颜色
             if (isset($fileheader[$i]['font_color'])) {
                 $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB($fileheader[$i]['font_color']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB("FF000000");
             }
+//            else {
+//                $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB("FFFFFFFF");
+//            }
 
             //单元宽度自适应,1.8.1版本phpexcel中文支持勉强可以，自适应后单独设置宽度无效
-            if (isset($fileheader[$i]['font_auto_size'])) {
-                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize($fileheader[$i]['font_auto_size']);
-            } else {
-                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(false);
-            }
+//            if (isset($fileheader[$i]['font_auto_size'])) {
+//                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize($fileheader[$i]['font_auto_size']);
+//            } else {
+//                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize(false);
+//            }
 
             //设置自动换行
             if (isset($fileheader[$i]['wrap_text'])) {
                 $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setWrapText($fileheader[$i]['wrap_text']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setWrapText(false);
             }
+//            else {
+//                $objActSheet->getStyle("$letter[$i]1")->getAlignment()->setWrapText(false);
+//            }
 
             //设置表头字体是否加粗
             if (isset($fileheader[$i]['font_bold'])) {
@@ -157,22 +167,25 @@ class Excel
 //            //设置border的颜色
             if (isset($fileheader[$i]['border_color'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB($fileheader[$i]['border_color']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
+//            }
 
             //填充颜色
             if (isset($fileheader[$i]['fill_type'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType($fileheader[$i]['fill_type']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType(Fill::FILL_SOLID);
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType(Fill::FILL_SOLID);
+//            }
 
             if (isset($fileheader[$i]['fill_color'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB($fileheader[$i]['fill_color']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB('FF808080');
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB('FF808080');
+//            }
 
 
             //保护cell
@@ -183,53 +196,43 @@ class Excel
 
 
         //设置除表头外数据格式
-        for ($i = 0; $i < count($data_style); $i++) {
+        for ($i = 0; $i < count($letter); $i++) {
+
             //设置字体大小
-
-            if (isset($data_style[$i]['font_size'])) {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setSize($data_style[$i]['font_size']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setSize(5000);
+            if (isset($data_style['font_size'])) {
+                $objActSheet->getStyle("$letter[$i]")->getFont()->setSize($data_style['font_size']);
             }
-
             //设置字体样式
-            if (isset($data_style[$i]['font_name'])) {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setName($data_style[$i]['font_name']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setName("微软雅黑");
+            if (isset($data_style['font_name'])) {
+                $objActSheet->getStyle("$letter[$i]")->getFont()->setName($data_style['font_name']);
             }
-
             //设置文字颜色
-            if (isset($data_style[$i]['font_color'])) {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->getColor()->setARGB($data_style[$i]['font_color']);
-            } else {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->getColor()->setARGB("FF000000");
+            if (isset($data_style['font_color'])) {
+                $objActSheet->getStyle("$letter[$i]")->getFont()->getColor()->setARGB($data_style['font_color']);
             }
-
             //单元宽度自适应,1.8.1版本phpexcel中文支持勉强可以，自适应后单独设置宽度无效
-            if (isset($data_style[$i]['font_auto_size'])) {
-                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize($data_style[$i]['font_auto_size']);
+            if (isset($data_style['font_auto_size'])) {
+                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize($data_style['font_auto_size']);
             } else {
                 $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(false);
             }
 
             //设置自动换行
-            if (isset($data_style[$i]['wrap_text'])) {
-                $objActSheet->getStyle("$letter[$i]")->getAlignment()->setWrapText($data_style[$i]['wrap_text']);
+            if (isset($data_style['wrap_text'])) {
+                $objActSheet->getStyle("$letter[$i]")->getAlignment()->setWrapText($data_style['wrap_text']);
             } else {
                 $objActSheet->getStyle("$letter[$i]")->getAlignment()->setWrapText(false);
             }
 
-            //设置表头字体是否加粗
-            if (isset($data_style[$i]['font_bold'])) {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setBold($data_style[$i]['font_bold']);
+            //设置字体是否加粗
+            if (isset($data_style['font_bold'])) {
+                $objActSheet->getStyle("$letter[$i]")->getFont()->setBold($data_style['font_bold']);
             } else {
-                $objActSheet->getStyle("$letter[$i]")->getFont()->setBold(true);
+                $objActSheet->getStyle("$letter[$i]")->getFont()->setBold(false);
             }
-
-            //设置表头文字垂直居中
-            if (isset($data_style[$i]['alignment_horizontal'])) {
-                $objActSheet->getStyle("$letter[$i]")->getAlignment()->setHorizontal($data_style[$i]['alignment_horizontal']);
+            //设置文字垂直居中
+            if (isset($data_style['alignment_horizontal'])) {
+                $objActSheet->getStyle("$letter[$i]")->getAlignment()->setHorizontal($data_style['alignment_horizontal']);
             } else {
                 $objActSheet->getStyle("$letter[$i]")->getAlignment()->setHorizontal(Alignment::HORIZONTAL_CENTER);
             }
@@ -238,24 +241,27 @@ class Excel
             //$objActSheet->getStyle($letter[$i])->getAlignment()->setVertical();//与下一行冲突
 
 //            //设置border的颜色
-            if (isset($data_style[$i]['border_color'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB($data_style[$i]['border_color']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
+            if (isset($data_style['border_color'])) {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB($data_style['border_color']);
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
+//            }
 
             //填充颜色
-            if (isset($data_style[$i]['fill_type'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType($data_style[$i]['fill_type']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
+            if (isset($data_style['fill_type'])) {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType($data_style['fill_type']);
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
+//            }
 
-            if (isset($data_style[$i]['fill_color'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB($fileheader[$i]['fill_color']);
-            } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB('FF808080');
+            if (isset($data_style['fill_color'])) {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB($data_style['fill_color']);
             }
+//            else {
+//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB('FF808080');
+//            }
 
 
             //保护cell
@@ -364,9 +370,49 @@ class Excel
             $objWriter->save('php://output');
         }
 
+    }
 
+    /**
+     * 循环获取头
+     */
+    public function getTableHeader($header_count)
+    {
+        $letter = [];
+        for ($j = 0; $j < $header_count; $j++) {
+            $letter[] = strtolower($this->greatezimu($j));
+        }
+        return $letter;
     }
 
 
+    //生成一个字母
+    public function greatezimu($count)
+    {
+        $zimu_first = $this->greateFirst($count);//获取了前几位的字母
+        $wei_count = intval($count % 26);//余数
+        return $zimu_first . chr($wei_count + 65);//存入大写字母,65开始为A,$i = 65; $i < 91
+
+    }
+
+    /**
+     * @param $count ,总的字母数
+     * @param string $s
+     * @return string
+     * 递归获取前几位字母
+     */
+    public function greateFirst($count, $s = "")
+    {
+        $shouwei = intval($count / 26) - 1;//商，即代表前面的字母取值
+        $s .= chr($shouwei + 65);
+        if ($shouwei <= 26) {
+            if ($shouwei < 0) {
+                return "";
+            }
+            return $s;//存入大写字母,65开始为A,$i = 65; $i < 91
+        } else {
+            return $this->greateFirst($shouwei, $s);
+        }
+
+    }
 }
 

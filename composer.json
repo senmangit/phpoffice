@@ -1,5 +1,5 @@
 {
-  "name": "senman/phpexcel",
+  "name": "senman/phpoffice",
   "description": "基于phpspreadsheet封装的excel组件",
   "license": "MIT",
   "keywords": [

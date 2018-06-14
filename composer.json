@@ -1,10 +1,12 @@
 {
-  "name": "senman/phpoffice",
-  "description": "基于phpspreadsheet封装的excel组件",
+  "name": "senman/office",
+  "description": "简单易用的office套件，可实现导出excel、将word转为PDF等等功能",
   "license": "MIT",
   "keywords": [
     "excel",
+    "office",
     "php",
+    "word",
     "export"
   ],
   "homepage": "https://www.monqin.com",
@@ -15,7 +17,7 @@
     }
   ],
   "support": {
-    "issues": "https://github.com/senmangit/phpexcel"
+    "issues": "https://github.com/senmangit/phpoffice"
   },
   "minimum-stability": "dev",
   "require": {
@@ -31,7 +33,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Excel\\": "src/Excel/"
+      "Excel\\": "src/Excel/",
+      "Word\\": "src/Word/"
     }
   }
 }

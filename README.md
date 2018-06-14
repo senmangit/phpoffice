@@ -1,12 +1,16 @@
 # phpexcel
 
-基于phpspreadsheet封装的excel导表组件。
+简单易用的office套件，可实现导出excel、将word转为PDF等等功能。
 
-1、安装
+一、安装
 
-composer require senman/phpexcel dev-master
+composer require senman/phpoffice dev-master
 
-2、使用示例
+二、使用示例
+
+
+1、导出表格
+
 
 ```
 
@@ -87,6 +91,21 @@ $properties=[
 $phpexcel->export($data, $file_name, $tableheader, $sheetname, $is_save, $save_path, $properties, $data_style);
 
 ```
+
+2、将word转为pdf
+
+该功能基于借助了openoffice服务，具体服务详情自行查阅相关文档
+
+```
+$converter = new PDFConverter();//实例化PDF组件
+
+$source = __DIR__ . '/1.doc';//需要转的资源文件
+$export = __DIR__ . '/2.pdf';//转成功后需要存贮的路径即文件名
+$converter->execute($source, $export);//执行转话操作
+
+
+```
+注意：务必开启openoffice服务后、开启extension=php_com_dotnet.dll 扩展
 
 6、如有任何疑问欢迎加入QQ群：338461207 进行交流
 if you have any questions, welcome to join QQ group: 338461207

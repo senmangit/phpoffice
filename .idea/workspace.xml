@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f264acde-c313-42a7-a021-dcdceb3e9950" name="Default" comment="">
+    <list default="true" id="45c54483-d04b-4bba-9d0d-9e90ee1c5247" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/assets/ClassDiagrams/Architecture.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/assets/ClassDiagrams/Exports/Architecture.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/assets/ClassDiagrams/Exports/ReaderWriter.png" />
@@ -32,8 +32,6 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/topics/images/09-command-line-calculation.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/topics/images/09-formula-in-cell-1.png" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/docs/topics/images/09-formula-in-cell-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example1.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example1.tsv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example1.xls" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example2.csv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example2.xls" />
@@ -134,44 +132,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/43mergeBook2.xlsx" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/GnumericTest.gnumeric" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/OOCalcTest.ods" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/SylkTest.slk" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/bg/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/bg/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/cs/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/cs/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/da/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/da/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/de/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/de/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/en/uk/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/es/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/es/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fi/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fi/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fr/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/hu/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/hu/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/it/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/it/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/nl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/nl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/no/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/no/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pl/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pl/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/br/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/br/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/config" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/ru/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/ru/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/sv/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/sv/functions" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/tr/config" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/tr/functions" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/psr/simple-cache" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
@@ -350,6 +312,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/17_Simple_file_reader_loading_several_named_worksheets.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/18_Reading_list_of_worksheets_without_loading_entire_file.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/19_Reading_worksheet_information_without_loading_entire_file.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example1.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reader/sampleData/example1.tsv" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reading_workbook_data/Custom_properties.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reading_workbook_data/Custom_property_names.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/Reading_workbook_data/Properties.php" />
@@ -363,6 +327,7 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/index.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/46readHtml.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/Excel2003XMLTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/SylkTest.slk" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/chartSpreadsheet.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/largeSpreadsheet.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/samples/templates/sampleSpreadsheet.php" />
@@ -387,6 +352,40 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/TextData.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/Token/Stack.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/functionlist.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/bg/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/bg/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/cs/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/cs/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/da/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/da/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/de/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/de/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/en/uk/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/es/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/es/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fi/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fi/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fr/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/fr/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/hu/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/hu/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/it/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/it/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/nl/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/nl/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/no/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/no/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pl/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pl/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/br/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/br/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/pt/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/ru/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/ru/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/sv/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/sv/functions" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/tr/config" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Calculation/locale/tr/functions" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Cell/AdvancedValueBinder.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Cell/Cell.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Cell/Coordinate.php" />
@@ -574,13 +573,13 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xlsx/Workbook.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xlsx/Worksheet.php" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Writer/Xlsx/WriterPart.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/phpexcel.iml" afterPath="$PROJECT_DIR$/.idea/phpexcel.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Word/Word.php" afterPath="$PROJECT_DIR$/src/Word/PDFConverter.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/phpexcel.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
-    <ignored path="$PROJECT_DIR$/vendor/composer/" />
-    <ignored path="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet/" />
-    <ignored path="$PROJECT_DIR$/vendor/psr/simple-cache/" />
-    <ignored path="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -588,40 +587,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="word.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/word.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-658">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/word.php" />
-        <option value="$PROJECT_DIR$/src/Word/Word.php" />
-      </list>
-    </option>
+  <component name="JsBowerSettings">
+    <exe-path />
+    <config-path />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -629,14 +600,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
-    <include_path>
-      <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
-      <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
-      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
-    </include_path>
-  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="40" />
     <option name="y" value="365" />
@@ -659,32 +623,13 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="phpoffice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="phpoffice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="phpoffice" type="b2602c69:ProjectViewProjectNode" />
-              <item name="phpoffice" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Word" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+    <property name="js.eslint.eslintPackage" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -705,31 +650,22 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f264acde-c313-42a7-a021-dcdceb3e9950" name="Default" comment="" />
-      <created>1528984145005</created>
+      <changelist id="45c54483-d04b-4bba-9d0d-9e90ee1c5247" name="Default" comment="" />
+      <created>1528984811763</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1528984145005</updated>
-      <workItem from="1528984146363" duration="531000" />
+      <updated>1528984811763</updated>
+      <workItem from="1528984813560" duration="4000" />
     </task>
-    <task id="LOCAL-00001" summary="修改文件名">
-      <created>1528984399141</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1528984399141</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531000" />
+    <option name="totallyTimeSpent" value="4000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -754,62 +690,8 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改文件名" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改文件名" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-658">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/Word.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/t.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/PDFConverter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/word.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

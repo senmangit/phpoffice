@@ -75,21 +75,3 @@ class PDFConverter
 
 
 }
-
-
-//$arr = array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx');
-//
-$converter = new PDFConverter();
-
-$source = __DIR__ . '/1.doc';
-$export = __DIR__ . '/2.pdf';
-$converter->execute($source, $export);
- $converter->execute($source, $export);
-//$converter->execute($source, $export);
-//echo __DIR__;
-////foreach ($arr as $ext) {
-//    $source = __DIR__ . '/office/test.' . $ext;
-////    $export = __DIR__ . '/pdf/test.' . $ext . '.pdf';
-////    $converter->execute($source, $export);
-////    echo '<p>' . $ext . ' Done</p>';
-////}

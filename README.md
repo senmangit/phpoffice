@@ -94,14 +94,18 @@ $phpexcel->export($data, $file_name, $tableheader, $sheetname, $is_save, $save_p
 
 2、将word转为pdf
 
-该功能基于借助了openoffice服务，具体服务详情自行查阅相关文档，参考：http://blog.monqin.com/?p=46
+该功能基于借助了openoffice服务，具体服务详情自行查阅相关文档，
+
+WIN参考：http://blog.monqin.com/?p=46
+
+LINUX参考：http://blog.monqin.com/?p=69
 
 ```
 $converter = new PDFConverter();//实例化PDF组件
 
 $source = __DIR__ . '/1.doc';//需要转的资源文件
 $export = __DIR__ . '/2.pdf';//转成功后需要存贮的路径即文件名
-$converter->execute($source, $export);//执行转话操作
+$converter->execute($source, $export);//执行转化操作
 
 
 ```

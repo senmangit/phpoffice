@@ -4,10 +4,6 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/Word" isTestSource="false" packagePrefix="Word\" />
       <sourceFolder url="file://$MODULE_DIR$/src/Excel" isTestSource="false" packagePrefix="Excel\" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoffice/phpspreadsheet" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/phpexcel.iml" filepath="$PROJECT_DIR$/.idea/phpexcel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/phpoffice.iml" filepath="$PROJECT_DIR$/.idea/phpoffice.iml" />
     </modules>
   </component>
 </project>

@@ -2,7 +2,7 @@
 
 namespace Word;
 
-class PDFConverter
+class Windows
 {
     private $com;
 
@@ -55,7 +55,7 @@ class PDFConverter
         return 0;
     }
 
-    private function setProperty($name, $value)
+    protected function setProperty($name, $value)
     {
         $struct = $this->com->Bridge_GetStruct('com.sun.star.beans.PropertyValue');
         $struct->Name = $name;
@@ -63,7 +63,7 @@ class PDFConverter
         return $struct;
     }
 
-    private function convertProcess($source, $export)
+    protected function convertProcess($source, $export)
     {
         $desktop_args = array($this->setProperty('Hidden', true));
         $desktop = $this->com->createInstance('com.sun.star.frame.Desktop');

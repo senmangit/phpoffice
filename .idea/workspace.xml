@@ -38,8 +38,8 @@
       <file leaf-file-name="Windows.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            <state relative-caret-position="183">
+              <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -108,11 +108,11 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/Word/PDFConverter.php" />
-        <option value="$PROJECT_DIR$/src/Word/Windows.php" />
         <option value="$PROJECT_DIR$/word.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/Word/Linux.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfConverter.php" />
+        <option value="$PROJECT_DIR$/src/Word/Windows.php" />
       </list>
     </option>
   </component>
@@ -213,7 +213,7 @@
       <updated>1529025794200</updated>
       <workItem from="1529025816888" duration="1414000" />
       <workItem from="1529029876376" duration="2818000" />
-      <workItem from="1529387363118" duration="7539000" />
+      <workItem from="1529387363118" duration="7556000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -257,11 +257,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529401536578</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="优化shell">
+      <created>1529404354066</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529404354066</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11771000" />
+    <option name="totallyTimeSpent" value="11788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -301,7 +308,8 @@
     <MESSAGE value="注释" />
     <MESSAGE value="屏蔽部分不宜上传的文件夹" />
     <MESSAGE value="优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化" />
+    <MESSAGE value="优化shell" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化shell" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -447,8 +455,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        <state relative-caret-position="183">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
         </state>
       </provider>

@@ -14,7 +14,6 @@ class Linux
      */
     public function execute($source, $export, $shell = " /usr/lib/java/jdk1.8.0_171/bin/java  -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar ")
     {
-
         $commond = $shell . " " . $source . " " . $export;
         exec($commond, $result, $status);
         return array("result" => $result, "status" => $status);

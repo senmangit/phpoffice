@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="优化shell">
+    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Word/PdfConverter.php" afterPath="$PROJECT_DIR$/src/Word/PdfConverter.php" />
+      <change beforePath="$PROJECT_DIR$/src/Word/Linux.php" afterPath="$PROJECT_DIR$/src/Word/Linux.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +28,8 @@
       <file leaf-file-name="Linux.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -38,7 +38,7 @@
       <file leaf-file-name="Windows.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
+            <state relative-caret-position="255">
               <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
               <folding />
             </state>
@@ -110,9 +110,9 @@
         <option value="$PROJECT_DIR$/src/Word/PDFConverter.php" />
         <option value="$PROJECT_DIR$/word.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Word/Linux.php" />
         <option value="$PROJECT_DIR$/src/Word/Windows.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfConverter.php" />
+        <option value="$PROJECT_DIR$/src/Word/Linux.php" />
       </list>
     </option>
   </component>
@@ -213,7 +213,7 @@
       <updated>1529025794200</updated>
       <workItem from="1529025816888" duration="1414000" />
       <workItem from="1529029876376" duration="2818000" />
-      <workItem from="1529387363118" duration="7756000" />
+      <workItem from="1529387363118" duration="7786000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -271,11 +271,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529404369072</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="优化shell">
+      <created>1529404564759</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1529404564759</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11988000" />
+    <option name="totallyTimeSpent" value="12018000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -436,26 +443,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
+    <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+        <state relative-caret-position="-2397">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
+        <state relative-caret-position="255">
           <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
+    <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2397">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
           <folding />
         </state>
       </provider>

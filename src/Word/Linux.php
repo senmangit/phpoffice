@@ -6,13 +6,74 @@ class Linux
 {
 
     /**
+     * @param $source
+     * @param $export
+     * @param string $shell 一定要写绝对路径
+     * @return array  执行结果和路径
      * Execute PDF file(absolute path) conversion
-     * @param $source [source file]
-     * @param $export [export file]
      */
-    public function execute($source, $export, $shell = " java -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar ")
+    public function execute($source, $export, $shell = " /usr/lib/java/jdk1.8.0_171/bin/java  -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar ")
     {
-        return exec($shell . " " . $source . " " . $export);
+
+        $commond = $shell . " " . $source . " " . $export;
+        exec($commond, $result, $status);
+        return array("result" => $result, "status" => $status);
+    }
+
+    public function exec_commond($cfe)
+    {
+        $res = '';
+
+        if ($cfe) {
+
+            if (function_exists('system')) {
+
+                @ob_start();
+
+                @system($cfe);
+
+                $res = @ob_get_contents();
+
+                @ob_end_clean();
+
+            } elseif (function_exists('passthru')) {
+
+                @ob_start();
+
+                @passthru($cfe);
+
+                $res = @ob_get_contents();
+
+                @ob_end_clean();
+
+            } elseif (function_exists('shell_exec')) {
+
+                $res = @shell_exec($cfe);
+
+            } elseif (function_exists('exec')) {
+
+                @exec($cfe, $res);
+
+                $res = join("\n", $res);
+
+            } elseif (@is_resource($f = @popen($cfe, "r"))) {
+
+                $res = '';
+
+                while (!@feof($f)) {
+
+                    $res .= @fread($f, 1024);
+
+                }
+
+                @pclose($f);
+
+            }
+
+        }
+
+        return $res;
+
     }
 
 }

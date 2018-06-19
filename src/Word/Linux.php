@@ -10,11 +10,9 @@ class Linux
      * @param $source [source file]
      * @param $export [export file]
      */
-    public function execute($source, $export)
+    public function execute($source, $export, $shell = " java -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar ")
     {
-//        $source = 'file:///' . str_replace('\\', '/', $source);
-//        $export = 'file:///' . str_replace('\\', '/', $export);
-//        $this->convertProcess($source, $export);
+        return exec($shell . " " . $source . " " . $export);
     }
 
 }

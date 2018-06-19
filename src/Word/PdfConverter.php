@@ -20,9 +20,8 @@ class PdfConverter
     public function execute($source, $export)
     {
         $my_system = $this->getSystem();
-        $system = new $my_system();
-        $source = 'file:///' . str_replace('\\', '/', $source);
-        $export = 'file:///' . str_replace('\\', '/', $export);
+        $className = "Word\\" . $my_system;
+        $system = new   $className();
         return $system->execute($source, $export);
     }
 }

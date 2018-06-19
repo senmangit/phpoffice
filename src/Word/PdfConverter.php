@@ -24,6 +24,6 @@ class PdfConverter
         $my_system = $this->getSystem();
         $className = "Word\\" . $my_system;
         $system = new   $className();
-        return $system->execute($source, $export);
+        return $system->execute($source, $export,$shell="");
     }
 }

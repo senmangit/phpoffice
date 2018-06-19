@@ -6,7 +6,9 @@ namespace Word;
 class PdfConverter
 {
 
-
+    /**
+     * @return string
+     */
     public function getSystem()
     {
         return strtoupper(substr(PHP_OS, 0, 3)) === 'WIN' ? "Windows" : "Linux";

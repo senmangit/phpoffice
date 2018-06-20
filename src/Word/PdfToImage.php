@@ -47,7 +47,7 @@ class PdfToImage
             }
         }
         //返回转化图片数组，由于pdf可能多页，此处返回二维数组。
-        $this->Spliceimg($Return, $image_path);
+        return $this->Spliceimg($Return, $image_path);
     }
 
 

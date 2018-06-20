@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/2.pdf" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/Word/PdfToImage.php" afterPath="$PROJECT_DIR$/src/Word/PdfToImage.php" />
       <change beforePath="$PROJECT_DIR$/word.php" afterPath="$PROJECT_DIR$/word.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +19,7 @@
       <file leaf-file-name="WordToPdf.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
+            <state relative-caret-position="289">
               <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
               <folding />
             </state>
@@ -29,10 +29,10 @@
       <file leaf-file-name="PdfToImage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+            <state relative-caret-position="156">
+              <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
               <folding>
-                <element signature="e#3058#4284#0#PHP" expanded="false" />
+                <element signature="e#3065#4291#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -94,8 +94,8 @@
       <file leaf-file-name="word.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -131,8 +131,8 @@
         <option value="$PROJECT_DIR$/src/Word/Windows.php" />
         <option value="$PROJECT_DIR$/src/Word/Linux.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfConverter.php" />
-        <option value="$PROJECT_DIR$/src/Word/PdfToImage.php" />
         <option value="$PROJECT_DIR$/src/Word/WordToPdf.php" />
+        <option value="$PROJECT_DIR$/src/Word/PdfToImage.php" />
         <option value="$PROJECT_DIR$/word.php" />
       </list>
     </option>
@@ -235,7 +235,7 @@
       <workItem from="1529025816888" duration="1414000" />
       <workItem from="1529029876376" duration="2818000" />
       <workItem from="1529387363118" duration="7819000" />
-      <workItem from="1529456566295" duration="3803000" />
+      <workItem from="1529456566295" duration="4183000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -321,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529465385019</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="转换测试">
+      <created>1529466073716</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1529466073716</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15854000" />
+    <option name="totallyTimeSpent" value="16234000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -368,7 +375,8 @@
     <MESSAGE value="优化shell" />
     <MESSAGE value="删除冗余" />
     <MESSAGE value="将pdf转为jpg" />
-    <option name="LAST_COMMIT_MESSAGE" value="将pdf转为jpg" />
+    <MESSAGE value="转换测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="转换测试" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -571,16 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="49" column="47" lean-forward="false" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
-          <folding>
-            <element signature="e#3058#4284#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -591,16 +589,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
+        <state relative-caret-position="289">
           <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="e#3065#4291#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/word.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="true" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
           <folding />
         </state>
       </provider>

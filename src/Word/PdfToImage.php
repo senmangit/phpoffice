@@ -22,7 +22,7 @@ class PdfToImage
     function pdf2png($pdf, $image_path, $page = -1)
     {
 
-        $path = dirname($image_path);
+        $path = dirname($image_path) . DIRECTORY_SEPARATOR;
         if (!extension_loaded('imagick')) {
             return false;
         }
@@ -32,13 +32,15 @@ class PdfToImage
         if (!is_readable($pdf)) {
             return false;
         }
-        $im = new Imagick();
+        $im = new \Imagick();
         $im->setResolution(150, 150);
         $im->setCompressionQuality(100);
-        if ($page == -1)
+        if ($page == -1) {
             $im->readImage($pdf);
-        else
+        } else {
             $im->readImage($pdf . "[" . $page . "]");
+        }
+
         foreach ($im as $Key => $Var) {
             $Var->setImageFormat('png');
             $filename = $path . md5($Key . time()) . '.png';
@@ -60,6 +62,8 @@ class PdfToImage
      */
     public function Spliceimg($imgs = array(), $img_path = '')
     {
+
+        $img_path_base = dirname($img_path) . DIRECTORY_SEPARATOR;
         //自定义宽度
         $width = 1230;
         //获取总高度
@@ -89,16 +93,21 @@ class PdfToImage
             //释放资源内存
             imagedestroy($source[$i]['source']);
         }
-        $returnfile = $img_path . date('Y-m-d');
+        $returnfile = $img_path_base;
         if (!file_exists($returnfile)) {
             if (!$this->make_dir($returnfile)) {
                 /* 创建目录失败 */
                 return false;
             }
         }
-        $return_imgpath = $returnfile . '/' . md5(time() . $pic_tall . 'pdftopng') . '.png';
-        imagepng($target_img, $return_imgpath);
-        return $return_imgpath;
+        //$return_imgpath = $returnfile . '/' . md5(time() . $pic_tall . 'pdftopng') . '.png';
+        //$return_imgpath = $returnfile . '/' . md5(time() . $pic_tall . 'pdftopng') . '.png';
+        //合成后删除原来图片
+        foreach ($imgs as $dk => $dv) {
+            @unlink($imgs[$dk]);
+        }
+        imagepng($target_img, $img_path);
+        return $img_path;
     }
 
 

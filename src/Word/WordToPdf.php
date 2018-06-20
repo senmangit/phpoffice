@@ -3,7 +3,7 @@
 
 namespace Word;
 
-class PdfConverter
+class WordToPdf
 {
 
     /**
@@ -20,11 +20,12 @@ class PdfConverter
      * @param $export [export file]
      * @param $shell  shell的绝对路径
      */
-    public function execute($source, $export,$shell="")
+    public function execute($source, $export, $shell = "")
     {
         $my_system = $this->getSystem();
         $className = "Word\\" . $my_system;
         $system = new   $className();
-        return $system->execute($source, $export,$shell);
+        return $system->execute($source, $export, $shell);
     }
+
 }

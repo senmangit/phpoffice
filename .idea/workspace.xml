@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
+    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="优化，整合">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/word.php" afterPath="$PROJECT_DIR$/word.php" />
+      <change beforePath="$PROJECT_DIR$/1.doc" afterPath="$PROJECT_DIR$/1.doc" />
+      <change beforePath="$PROJECT_DIR$/src/Word/Linux.php" afterPath="$PROJECT_DIR$/src/Word/Linux.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,7 +16,7 @@
   <component name="ComposerSettings" doNotAsk="true" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="WordToPdf.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WordToPdf.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -28,7 +29,7 @@
       <file leaf-file-name="PdfToImage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="466">
               <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
               <folding>
                 <element signature="e#1736#1878#0#PHP" expanded="false" />
@@ -41,8 +42,8 @@
       <file leaf-file-name="Linux.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+            <state relative-caret-position="204">
+              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -91,11 +92,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="word.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="word.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/word.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,8 +134,8 @@
         <option value="$PROJECT_DIR$/src/Word/PdfConverter.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfToImage.php" />
         <option value="$PROJECT_DIR$/src/Word/WordToPdf.php" />
-        <option value="$PROJECT_DIR$/src/Word/Linux.php" />
         <option value="$PROJECT_DIR$/word.php" />
+        <option value="$PROJECT_DIR$/src/Word/Linux.php" />
       </list>
     </option>
   </component>
@@ -210,6 +211,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\WWW\phpoffice" />
       <recent name="D:\WWW\phpoffice\src\Word" />
     </key>
   </component>
@@ -243,7 +245,7 @@
       <workItem from="1529387363118" duration="7819000" />
       <workItem from="1529456566295" duration="9256000" />
       <workItem from="1529548104313" duration="613000" />
-      <workItem from="1529558591732" duration="1944000" />
+      <workItem from="1529558591732" duration="3043000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -364,11 +366,18 @@
       <option name="project" value="LOCAL" />
       <updated>1529559859829</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="优化，整合">
+      <created>1529561338288</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1529561338288</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23864000" />
+    <option name="totallyTimeSpent" value="24963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -764,6 +773,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/word.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/Windows.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -774,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
+        <state relative-caret-position="466">
           <caret line="52" column="5" lean-forward="false" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
           <folding>
             <element signature="e#1736#1878#0#PHP" expanded="false" />
@@ -787,22 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/word.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

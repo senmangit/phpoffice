@@ -12,9 +12,11 @@ class Linux
      * @return array  执行结果和路径
      * Execute PDF file(absolute path) conversion
      */
-    public function execute($source, $export, $shell = " /usr/lib/java/jdk1.8.0_171/bin/java  -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar ")
+    public function execute($source, $export)
     {
-        $commond = $shell . " " . $source . " " . $export;
+        // $shell = " java  -jar /home/jodconverter/jodconverter-2.2.2/lib/jodconverter-cli-2.2.2.jar "
+        $jod_path = dirname(dirname(dirname(__FILE__))) . DIRECTORY_SEPARATOR . "jodconverter" . DIRECTORY_SEPARATOR . "lib" . DIRECTORY_SEPARATOR . "jodconverter-cli-2.2.2.jar";
+        $commond = " java  -jar  {$jod_path}   {$source}   {$export} ";
         exec($commond, $result, $status);
         return array("result" => $result, "status" => $status);
     }

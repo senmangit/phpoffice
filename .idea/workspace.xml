@@ -1,34 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="合成图片">
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/ChangeLog.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/README.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/docs/jodconverter-2.2.2-javadoc.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/docs/third-party-licenses/license-commons-io.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/docs/third-party-licenses/license-openoffice.org.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/docs/third-party-licenses/license-slf4j.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/docs/third-party-licenses/license-xstream.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/document-formats.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/DEPENDENCIES.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/commons-cli-1.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/commons-io-1.4.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/jodconverter-2.2.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/jodconverter-cli-2.2.2.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/juh-3.0.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/jurt-3.0.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/ridl-3.0.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/slf4j-api-1.5.6.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/slf4j-jdk14-1.5.6.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/unoil-3.0.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/lib/xstream-1.3.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/src/jodconverter-2.2.2-sources.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jodconverter/src/jodconverter-cli-2.2.2-sources.jar" />
+    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2.pdf" afterPath="$PROJECT_DIR$/2.pdf" />
-      <change beforePath="$PROJECT_DIR$/src/Word/Linux.php" afterPath="$PROJECT_DIR$/src/Word/Linux.php" />
-      <change beforePath="$PROJECT_DIR$/src/Word/WordToPdf.php" afterPath="$PROJECT_DIR$/src/Word/WordToPdf.php" />
       <change beforePath="$PROJECT_DIR$/word.php" afterPath="$PROJECT_DIR$/word.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Linux.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Linux.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -117,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="word.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="word.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/word.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -158,9 +132,9 @@
         <option value="$PROJECT_DIR$/src/Word/Windows.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfConverter.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfToImage.php" />
-        <option value="$PROJECT_DIR$/word.php" />
         <option value="$PROJECT_DIR$/src/Word/WordToPdf.php" />
         <option value="$PROJECT_DIR$/src/Word/Linux.php" />
+        <option value="$PROJECT_DIR$/word.php" />
       </list>
     </option>
   </component>
@@ -269,7 +243,7 @@
       <workItem from="1529387363118" duration="7819000" />
       <workItem from="1529456566295" duration="9256000" />
       <workItem from="1529548104313" duration="613000" />
-      <workItem from="1529558591732" duration="1246000" />
+      <workItem from="1529558591732" duration="1944000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -383,16 +357,24 @@
       <option name="project" value="LOCAL" />
       <updated>1529473190613</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="优化，整合">
+      <created>1529559859829</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1529559859829</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23166000" />
+    <option name="totallyTimeSpent" value="23864000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26385927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26385927" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38547486" sideWeight="0.39498934" order="7" side_tool="true" content_ui="tabs" />
@@ -432,7 +414,8 @@
     <MESSAGE value="转换测试" />
     <MESSAGE value="测试" />
     <MESSAGE value="合成图片" />
-    <option name="LAST_COMMIT_MESSAGE" value="合成图片" />
+    <MESSAGE value="优化，整合" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化，整合" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -800,14 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/word.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -818,8 +793,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Word/Linux.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="272">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/word.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

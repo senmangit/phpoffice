@@ -9,9 +9,6 @@ $source = __DIR__ . DIRECTORY_SEPARATOR . '1.doc';
 $export = __DIR__ . DIRECTORY_SEPARATOR . '2.pdf';
 var_dump($converter->execute($source, $export));
 
-die;
-
-
 //pdf转为图片
 $pdftoimage=new \Word\PdfToImage();
 $source = __DIR__ . DIRECTORY_SEPARATOR . 'test.png';

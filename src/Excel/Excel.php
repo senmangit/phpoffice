@@ -8,6 +8,9 @@
 
 namespace Excel;
 
+use PhpOffice\PhpSpreadsheet\Cell\Coordinate;
+use PhpOffice\PhpSpreadsheet\IOFactory;
+use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -370,6 +373,64 @@ class Excel
             $objWriter->save('php://output');
         }
 
+    }
+
+    /**
+     * @param $source
+     * @param int $start_line
+     * @param null $end_line
+     * @param int $start_column
+     * @param null $end_column
+     * @return array
+     * @throws Exception
+     * @throws \PhpOffice\PhpSpreadsheet\Exception
+     * 将表格数据转换为数组
+     */
+
+    function import($source, $start_line = 2, $end_line = null, $start_column = 1, $end_column = null)
+    {
+
+        $ext = pathinfo($source, PATHINFO_EXTENSION);
+        if (strtolower($ext) == "xls") {
+            $reader = IOFactory::createReader('Xls');
+        } elseif (strtolower($ext) == "xlsx") {
+            $reader = IOFactory::createReader('Xlsx');
+        } else {
+            throw new Exception("文件后缀错误");
+        }
+        $spreadsheet = $reader->load($source);
+        $reader->setReadDataOnly(TRUE);
+        $worksheet = $spreadsheet->getActiveSheet();
+        $highestRow = $worksheet->getHighestRow(); // 总行数
+        $highestColumn = $worksheet->getHighestColumn(); // 总列数
+        $highestColumnIndex = Coordinate::columnIndexFromString($highestColumn); // e.g. 5
+        if (!is_null($end_column)) {
+            $column_count = $end_column;
+        } else {
+            $column_count = $highestColumnIndex;
+        }
+
+        if (!is_null($end_line)) {
+            $line_count = $end_line;
+        } else {
+            $line_count = $highestRow;
+        }
+
+
+        $lines = $highestRow - 1;
+        if ($lines <= 0) {
+            exit('Excel表格中没有数据');
+        }
+
+        $data = [];
+        for ($start_line_i = $start_line; $start_line_i <= $line_count; ++$start_line_i) {
+            $colum_data = [];
+            for ($start_column_i = $start_column; $start_column_i <= $column_count; ++$start_column_i) {
+                $colum_data[] = $worksheet->getCellByColumnAndRow($start_column_i, $start_line_i)->getValue();
+            }
+            $data[] = $colum_data;
+        }
+        return $data;
     }
 
     /**

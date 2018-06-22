@@ -92,6 +92,28 @@ $phpexcel->export($data, $file_name, $tableheader, $sheetname, $is_save, $save_p
 
 ```
 
+2、导入表格
+
+
+import()方法有以下参数，除第一个资源路径参数为必须外，其余为选传参数
+
+参数有：$source, $start_line = 2, $end_line = null, $start_column = 1, $end_column = null
+
+$source：文件路径，（必须传入）
+$start_line：从第几行开始
+$end_line：到几行结束
+$start_column：从第几列开始
+$end_column：到第几列的数据
+该函数返回一个数组
+```
+require 'vendor/autoload.php';
+$phpexcel = new \Excel\Excel();
+
+//表格导入测试
+$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.xls';
+var_dump($phpexcel->import($source));
+
+```
 2、将word转为pdf
 
 该功能基于借助了openoffice服务，具体服务详情自行查阅相关文档，

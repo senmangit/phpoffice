@@ -6,9 +6,17 @@
  * Time: 9:20
  */
 require 'vendor/autoload.php';
-
-
 $phpexcel = new \Excel\Excel();
+
+//表格导入测试
+$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.xls';
+var_dump($phpexcel->import($source));
+
+
+die;
+
+//表格导出测试
+
 $tableheader = [
     [
         "title" => "我是测试",//定义标题，必须要配置

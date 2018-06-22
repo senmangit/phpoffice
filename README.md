@@ -149,5 +149,9 @@ var_dump($pdftoimage->pdf2png($pdf,$path,$page=-1));
 ```
 
 
-5、如有任何疑问欢迎加入QQ群：338461207 进行交流
+5、若是需要在linux安装openoffice环境，可直接执行该包里的office.sh脚本文件，可以避免很多的踩坑事件
+
+
+6、如有任何疑问欢迎加入QQ群：338461207 进行交流
 if you have any questions, welcome to join QQ group: 338461207
+

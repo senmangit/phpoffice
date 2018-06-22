@@ -95,9 +95,9 @@ $data是需要传入的数据，为必须要传入的参数
 
 $file_name 是导出的表格名称，为必须要传入的参数
 
-$fileheader 为子表sheet的名称，为必须要传入的参数，
+$sheetname 为子表sheet的名称，为必须要传入的参数，
 
-$sheetname,为必须要传入的表标题，最简单的可这样传入数组：
+$fileheader,为必须要传入的表标题，最简单的可这样传入数组：
  
  ["title"=>"姓名"，"title"=>"性别"]
 

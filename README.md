@@ -125,6 +125,9 @@ WIN参考：http://blog.monqin.com/?p=46
 
 LINUX参考：http://blog.monqin.com/?p=69
 
+支持将下列格式文件转为pdf：
+'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'
+
 ```
 $converter = new PDFConverter();//实例化PDF组件
 $source = __DIR__ . '/1.doc';//需要转的资源文件
@@ -134,9 +137,15 @@ $converter->execute($source, $export);//执行转化操作
 ```
 4、将pdf转为图片
 
-```$pdftoimage=new \Word\PdfToImage();
-$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.png';
-var_dump($pdftoimage->pdf2png($export,$source));
+ $pdf  待处理的PDF文件
+ $path 待保存的图片路径
+ $page 待导出的页面 -1为全部 0为第一页 1为第二页
+
+```
+$pdftoimage=new \Word\PdfToImage();
+$pdf = __DIR__ . DIRECTORY_SEPARATOR . '2.pdf';//需要转为图片的PDF
+$path = __DIR__ . DIRECTORY_SEPARATOR . 'test.png';//需要保存的图片路径
+var_dump($pdftoimage->pdf2png($pdf,$path,$page=-1));
 ```
 
 

@@ -94,7 +94,6 @@ $phpexcel->export($data, $file_name, $tableheader, $sheetname, $is_save, $save_p
 
 2、导入表格
 
-
 import()方法有以下参数，除第一个资源路径参数为必须外，其余为选传参数
 
 参数有：$source, $start_line = 2, $end_line = null, $start_column = 1, $end_column = null
@@ -118,7 +117,7 @@ $source = __DIR__ . DIRECTORY_SEPARATOR . 'test.xls';
 var_dump($phpexcel->import($source));
 
 ```
-2、将word转为pdf
+3、将word转为pdf
 
 该功能基于借助了openoffice服务，具体服务详情自行查阅相关文档，
 
@@ -128,14 +127,18 @@ LINUX参考：http://blog.monqin.com/?p=69
 
 ```
 $converter = new PDFConverter();//实例化PDF组件
-
 $source = __DIR__ . '/1.doc';//需要转的资源文件
 $export = __DIR__ . '/2.pdf';//转成功后需要存贮的路径即文件名
 $converter->execute($source, $export);//执行转化操作
 
-
 ```
-注意：务必开启openoffice服务后、开启extension=php_com_dotnet.dll 扩展
+4、将pdf转为图片
 
-6、如有任何疑问欢迎加入QQ群：338461207 进行交流
+```$pdftoimage=new \Word\PdfToImage();
+$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.png';
+var_dump($pdftoimage->pdf2png($export,$source));
+```
+
+
+5、如有任何疑问欢迎加入QQ群：338461207 进行交流
 if you have any questions, welcome to join QQ group: 338461207

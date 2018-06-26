@@ -146,7 +146,7 @@ $export = __DIR__ . '/2.pdf';//转成功后需要存贮的路径即文件名
 $converter->execute($source, $export);//执行转化操作
 
 ```
-4、将pdf转为图片
+4、将pdf转为图片，该功能需要安装imagick扩展
 
  $pdf  待处理的PDF文件
  $path 待保存的图片路径

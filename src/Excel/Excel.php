@@ -13,6 +13,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
+use PhpOffice\PhpSpreadsheet\Style\Fill;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Excel
@@ -87,6 +88,7 @@ class Excel
         // $letter = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
         $header_count = count($fileheader);//获取头数量
         $letter = $this->getTableHeader($header_count);
+
         //设置当前的sheet
         $objPHPExcel->setActiveSheetIndex(0);
 
@@ -130,10 +132,9 @@ class Excel
             //设置表头文字颜色
             if (isset($fileheader[$i]['font_color'])) {
                 $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB($fileheader[$i]['font_color']);
+            } else {
+                $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB("FFFFFFFF");
             }
-//            else {
-//                $objActSheet->getStyle("$letter[$i]1")->getFont()->getColor()->setARGB("FFFFFFFF");
-//            }
 
             //单元宽度自适应,1.8.1版本phpexcel中文支持勉强可以，自适应后单独设置宽度无效
 //            if (isset($fileheader[$i]['font_auto_size'])) {
@@ -175,20 +176,19 @@ class Excel
 //                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
 //            }
 
-            //填充颜色
+            //填充类型
             if (isset($fileheader[$i]['fill_type'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType($fileheader[$i]['fill_type']);
+            } else {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType(Fill::FILL_SOLID);
             }
-//            else {
-//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->setFillType(Fill::FILL_SOLID);
-//            }
 
+            //填充颜色
             if (isset($fileheader[$i]['fill_color'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB($fileheader[$i]['fill_color']);
+            } else {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB('FF808080');
             }
-//            else {
-//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]1")->getFill()->getStartColor()->setARGB('FF808080');
-//            }
 
 
             //保护cell
@@ -251,14 +251,13 @@ class Excel
 //                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
 //            }
 
-            //填充颜色
+            //填充类型
             if (isset($data_style['fill_type'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType($data_style['fill_type']);
+            } else {
+                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
             }
-//            else {
-//                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
-//            }
-
+            //填充颜色
             if (isset($data_style['fill_color'])) {
                 $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB($data_style['fill_color']);
             }
@@ -440,7 +439,7 @@ class Excel
     {
         $letter = [];
         for ($j = 0; $j < $header_count; $j++) {
-            $letter[] = strtolower($this->greatezimu($j));
+            $letter[] = strtoupper($this->greatezimu($j));
         }
         return $letter;
     }

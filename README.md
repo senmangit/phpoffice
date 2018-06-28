@@ -56,6 +56,7 @@ $data_style = [
     "font_name" => "微软雅黑",//定义数据部分
     "font_color" => "FFFF0000",//定义数据部分字体颜色
     "fill_color" => "00B050",//定义数据部分填充颜色
+    "fill_type" => "solid",//定义填充类型，默认为solid
 
 
 ];

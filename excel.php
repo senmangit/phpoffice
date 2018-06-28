@@ -50,5 +50,5 @@ $sheetname = "测试表";
 $data = [
     ["senman" => 1, "senman1" => "2"],
 ];
-$phpexcel->export($data, "test.xls", $tableheader, $sheetname, 0, "./", $properties = [], $data_style);
+$phpexcel->export($data, "test.xlsx", $tableheader, $sheetname, 0, "./", $properties = [], $data_style);
 

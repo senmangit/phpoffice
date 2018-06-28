@@ -354,7 +354,6 @@ class Excel
                 throw new \Exception("路径不存在");
             }
         } else {
-
             ob_end_clean();
             //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
             header('Content-Disposition: attachment;filename="' . $file_name . '"');

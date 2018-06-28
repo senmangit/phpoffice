@@ -13,9 +13,7 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
-use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Style\Fill;
-use PhpOffice\PhpSpreadsheet\Style\Style;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Excel
@@ -253,7 +251,7 @@ class Excel
                 if (isset($data_style['border_style'])) {
                     $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle($data_style['border_style']);
                 } else {
-                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle(Border::BORDER_THIN);
+                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle(\PHPExcel_Style_Border::BORDER_THIN);
                 }
             }
 
@@ -362,14 +360,16 @@ class Excel
                 }
                 // 保存excel在服务器上
                 //$objWriter = new \PHPExcel_Writer_Excel2007($objPHPExcel);
-                $objWriter = new Xlsx($objPHPExcel);
-                //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
+//                $objWriter = new Xlsx($objPHPExcel);
+//                //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
+//                $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
+                $objWriter = IOFactory::createWriter($objPHPExcel, 'Xlsx');
                 $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
+
             } else {
                 throw new \Exception("路径不存在");
             }
         } else {
-
             ob_end_clean();
             //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
             header('Content-Disposition: attachment;filename="' . $file_name . '"');
@@ -383,8 +383,9 @@ class Excel
             header("Content-Type:application/download");;
             header("Content-Transfer-Encoding:binary");
             // 用户下载excel
-            $objWriter = new Xlsx($objPHPExcel);
+            $objWriter = IOFactory::createWriter($objPHPExcel, 'Xlsx');
             $objWriter->save('php://output');
+
         }
 
     }

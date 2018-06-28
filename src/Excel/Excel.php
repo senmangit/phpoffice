@@ -13,7 +13,9 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Style\Fill;
+use PhpOffice\PhpSpreadsheet\Style\Style;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Excel
@@ -88,6 +90,8 @@ class Excel
         // $letter = array('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H');
         $header_count = count($fileheader);//获取头数量
         $letter = $this->getTableHeader($header_count);
+        $letter_count = count($letter);//字母的个数
+        $data_count = count($data);//数据的行数;
 
         //设置当前的sheet
         $objPHPExcel->setActiveSheetIndex(0);
@@ -199,7 +203,7 @@ class Excel
 
 
         //设置除表头外数据格式
-        for ($i = 0; $i < count($letter); $i++) {
+        for ($i = 0; $i < $letter_count; $i++) {
 
             //设置字体大小
             if (isset($data_style['font_size'])) {
@@ -219,6 +223,7 @@ class Excel
             } else {
                 $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(false);
             }
+
 
             //设置自动换行
             if (isset($data_style['wrap_text'])) {
@@ -243,9 +248,18 @@ class Excel
             //设置文字上下居中
             //$objActSheet->getStyle($letter[$i])->getAlignment()->setVertical();//与下一行冲突
 
-//            //设置border的颜色
+            //设置边框类型
+            for ($di = $data_count + 1; $di > 0; --$di) {
+                if (isset($data_style['border_style'])) {
+                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle($data_style['border_style']);
+                } else {
+                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle(Border::BORDER_THIN);
+                }
+            }
+
+            //设置border的颜色
             if (isset($data_style['border_color'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB($data_style['border_color']);
+                $objActSheet->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB($data_style['border_color']);
             }
 //            else {
 //                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getBorders()->getLeft()->getColor()->setARGB('FF993300');
@@ -253,13 +267,14 @@ class Excel
 
             //填充类型
             if (isset($data_style['fill_type'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType($data_style['fill_type']);
+                $objActSheet->getStyle("$letter[$i]")->getFill()->setFillType($data_style['fill_type']);
             } else {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
+                $objActSheet->getStyle("$letter[$i]")->getFill()->setFillType(Fill::FILL_SOLID);
             }
+
             //填充颜色
             if (isset($data_style['fill_color'])) {
-                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB($data_style['fill_color']);
+                $objActSheet->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB($data_style['fill_color']);
             }
 //            else {
 //                $objPHPExcel->getActiveSheet()->getStyle("$letter[$i]")->getFill()->getStartColor()->setARGB('FF808080');
@@ -273,10 +288,10 @@ class Excel
         }
 
 
-        foreach ($letter as $lk => $lv) {
-            //单独设置D列宽度为15
-            //$objActSheet->getColumnDimension($lv)->setWidth(100);
-        }
+        //  foreach ($letter as $lk => $lv) {
+        //单独设置D列宽度为15
+        //$objActSheet->getColumnDimension($lv)->setWidth(100);
+        //    }
 //
 //        $objActSheet->getColumnDimension('G')->setWidth(20);
 //        $objActSheet->getColumnDimension('E')->setWidth(20);
@@ -305,7 +320,7 @@ class Excel
 //        $objDrawing->getShadow()->setVisible(true);
 //        $objDrawing->getShadow()->setDirection(45);
 //        $objDrawing->setWorksheet($objPHPExcel->getActiveSheet());
-        for ($i = 2; $i <= count($data) + 1; $i++) {
+        for ($i = 2; $i <= $data_count + 1; $i++) {
             $j = 0;
             foreach ($data[$i - 2] as $key => $value) {
                 //是图片是加入图片到excel
@@ -354,6 +369,7 @@ class Excel
                 throw new \Exception("路径不存在");
             }
         } else {
+
             ob_end_clean();
             //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
             header('Content-Disposition: attachment;filename="' . $file_name . '"');

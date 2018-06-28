@@ -13,7 +13,9 @@ use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Style\Alignment;
+use PhpOffice\PhpSpreadsheet\Style\Border;
 use PhpOffice\PhpSpreadsheet\Style\Fill;
+use PhpOffice\PhpSpreadsheet\Style\Style;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Excel
@@ -251,7 +253,7 @@ class Excel
                 if (isset($data_style['border_style'])) {
                     $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle($data_style['border_style']);
                 } else {
-                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle(\PHPExcel_Style_Border::BORDER_THIN);
+                    $objActSheet->getStyle("$letter[$i]$di")->getBorders()->getAllBorders()->setBorderStyle(Border::BORDER_THIN);
                 }
             }
 
@@ -360,32 +362,35 @@ class Excel
                 }
                 // 保存excel在服务器上
                 //$objWriter = new \PHPExcel_Writer_Excel2007($objPHPExcel);
-//                $objWriter = new Xlsx($objPHPExcel);
-//                //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
-//                $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
-                $objWriter = IOFactory::createWriter($objPHPExcel, 'Xlsx');
+                $objWriter = new Xlsx($objPHPExcel);
+                //或者$objWriter = new PHPExcel_Writer_Excel5($excel);
                 $objWriter->save($save_path . DIRECTORY_SEPARATOR . $file_name);
-
             } else {
                 throw new \Exception("路径不存在");
             }
         } else {
+
             ob_end_clean();
             //下载的excel文件名称，为Excel5，后缀为xls，不过影响似乎不大
+            header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
             header('Content-Disposition: attachment;filename="' . $file_name . '"');
             header('Cache-Control: max-age=0');
-            header("Pragma: public");
-            header("Expires: 0");
-            header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
-            header("Content-Type:application/force-download");
-            header("Content-Type:application/vnd.ms-execl");
-            header("Content-Type:application/octet-stream");
-            header("Content-Type:application/download");;
-            header("Content-Transfer-Encoding:binary");
-            // 用户下载excel
-            $objWriter = IOFactory::createWriter($objPHPExcel, 'Xlsx');
-            $objWriter->save('php://output');
+            header('Cache-Control: max-age=1');
+            header("Pragma: public");// HTTP/1.0
+            // header("Cache-Control:must-revalidate, post-check=0, pre-check=0");
+//            header("Content-Type:application/force-download");
+//            header("Content-Type:application/vnd.ms-execl");
+//            header("Content-Type:application/octet-stream");
+//            header("Content-Type:application/download");
+//            header("Content-Transfer-Encoding:binary");
+            // If you're serving to IE over SSL, then the following may be needed
+            header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+            header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+            header('Cache-Control: cache, must-revalidate'); // HTTP/1.1
 
+            // 用户下载excel
+            $objWriter = new Xlsx($objPHPExcel);
+            $objWriter->save('php://output');
         }
 
     }

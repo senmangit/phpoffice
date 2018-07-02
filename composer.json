@@ -1,5 +1,5 @@
 {
-  "name": "senman/office",
+  "name": "senman/phpoffice",
   "description": "简单易用的office套件，可实现导出excel、将word转为PDF等等功能",
   "license": "MIT",
   "keywords": [

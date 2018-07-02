@@ -1,6 +1,6 @@
-# phpexcel
+# phpoffice
 
-简单易用的office套件，可实现导出excel、将word转为PDF等等功能。
+简单易用的phpoffice套件，可实现导入/导出excel、将word转为PDF,将pdf转为图片等等功能。。
 
 一、安装
 

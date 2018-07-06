@@ -100,8 +100,6 @@ class PdfToImage
                 return false;
             }
         }
-        //$return_imgpath = $returnfile . '/' . md5(time() . $pic_tall . 'pdftopng') . '.png';
-        //$return_imgpath = $returnfile . '/' . md5(time() . $pic_tall . 'pdftopng') . '.png';
         //合成后删除原来图片
         foreach ($imgs as $dk => $dv) {
             @unlink($imgs[$dk]);

@@ -23,7 +23,6 @@ class WordToPdf
     public function execute($source, $export, $shell = "")
     {
         $my_system = $this->getSystem();
-        $my_system = "Linux";
         $className = "Word\\" . $my_system;
         $system = new   $className();
         return $system->execute($source, $export, $shell);

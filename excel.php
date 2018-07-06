@@ -9,11 +9,11 @@ require 'vendor/autoload.php';
 $phpexcel = new \Excel\Excel();
 
 //表格导入测试
-$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.xls';
-var_dump($phpexcel->import($source));
-
-
-die;
+//$source = __DIR__ . DIRECTORY_SEPARATOR . 'test.xls';
+//var_dump($phpexcel->import($source));
+//
+//
+//die;
 
 //表格导出测试
 
@@ -48,7 +48,7 @@ $data_style = [
 ];
 $sheetname = "测试表";
 $data = [
-    ["senman" => 1, "senman1" => "2"],
+    ["senman" => "12qweqweqweqweqweqweqweqweqweqweqweqwe", "senman1" => "2qweqweqweqweqweqweqweqweqweqweqweqwe"],
 ];
 $phpexcel->export($data, "test.xlsx", $tableheader, $sheetname, 0, "./", $properties = [], $data_style);
 

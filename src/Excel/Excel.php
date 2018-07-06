@@ -140,11 +140,11 @@ class Excel
             }
 
             //单元宽度自适应,1.8.1版本phpexcel中文支持勉强可以，自适应后单独设置宽度无效
-//            if (isset($fileheader[$i]['font_auto_size'])) {
-//                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize($fileheader[$i]['font_auto_size']);
-//            } else {
-//                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize(false);
-//            }
+            if (isset($fileheader[$i]['font_auto_size'])) {
+                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize($fileheader[$i]['font_auto_size']);
+            } else {
+                $objActSheet->getColumnDimension("$letter[$i]1")->setAutoSize(true);
+            }
 
             //设置自动换行
             if (isset($fileheader[$i]['wrap_text'])) {
@@ -220,9 +220,8 @@ class Excel
             if (isset($data_style['font_auto_size'])) {
                 $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize($data_style['font_auto_size']);
             } else {
-                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(false);
+                $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(true);
             }
-
 
             //设置自动换行
             if (isset($data_style['wrap_text'])) {

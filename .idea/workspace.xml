@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="表格导出兼容调试">
+    <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/2.pdf" afterPath="$PROJECT_DIR$/2.pdf" />
       <change beforePath="$PROJECT_DIR$/src/Excel/Excel.php" afterPath="$PROJECT_DIR$/src/Excel/Excel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,11 +70,11 @@
       <file leaf-file-name="Excel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="216" column="20" lean-forward="true" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
+            <state relative-caret-position="612">
+              <caret line="230" column="0" lean-forward="true" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
               <folding>
                 <element signature="e#106#151#0#PHP" expanded="true" />
-                <element signature="e#17005#18630#0#PHP" expanded="false" />
+                <element signature="e#17004#18629#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -274,7 +273,7 @@
       <workItem from="1530166349786" duration="3429000" />
       <workItem from="1530251521327" duration="599000" />
       <workItem from="1530769125667" duration="8621000" />
-      <workItem from="1530837622102" duration="5971000" />
+      <workItem from="1530837622102" duration="6318000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -542,11 +541,18 @@
       <option name="project" value="LOCAL" />
       <updated>1530863914346</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="表格宽度">
+      <created>1530868177533</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1530868177533</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59333000" />
+    <option name="totallyTimeSpent" value="59680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -622,7 +628,8 @@
     <MESSAGE value="表格导出兼容调试" />
     <MESSAGE value="优化" />
     <MESSAGE value="自动行宽" />
-    <option name="LAST_COMMIT_MESSAGE" value="自动行宽" />
+    <MESSAGE value="表格宽度" />
+    <option name="LAST_COMMIT_MESSAGE" value="表格宽度" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,7 +658,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17005#18630#0#PHP" expanded="false" />
+            <element signature="e#17004#18629#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -727,7 +734,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17005#18630#0#PHP" expanded="false" />
+            <element signature="e#17004#18629#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -800,7 +807,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17005#18630#0#PHP" expanded="false" />
+            <element signature="e#17004#18629#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -852,7 +859,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17005#18630#0#PHP" expanded="false" />
+            <element signature="e#17004#18629#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1046,11 +1053,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="216" column="20" lean-forward="true" selection-start-line="216" selection-start-column="20" selection-end-line="216" selection-end-column="20" />
+        <state relative-caret-position="612">
+          <caret line="230" column="0" lean-forward="true" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17005#18630#0#PHP" expanded="false" />
+            <element signature="e#17004#18629#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>

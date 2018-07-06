@@ -229,7 +229,6 @@ class Excel
                 $objActSheet->getColumnDimension("$letter[$i]")->setAutoSize(true);
             }
 
-
             //设置表格宽度
             if (isset($data_style[$i]['column_width_size'])) {
                 $objActSheet->getColumnDimension($letter[$i])->setWidth($data_style[$i]['column_width_size']);

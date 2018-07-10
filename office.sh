@@ -38,7 +38,7 @@ if [ $s_bit==64 ];then
    echo "开始下载64位的openoffice"; 
    wget -vcO download https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.5/binaries/zh-CN/Apache_OpenOffice_4.1.5_Linux_x86-64_install-rpm_zh-CN.tar.gz/download; 
 else
-   echo "开始下载32位的openoffice"；
+   echo "开始下载32位的openoffice";
    wget -vcO  download https://sourceforge.net/projects/openofficeorg.mirror/files/4.1.5/binaries/zh-CN/Apache_OpenOffice_4.1.5_Linux_x86_install-rpm_zh-CN.tar.gz/download;
 fi
 

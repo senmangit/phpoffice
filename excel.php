@@ -48,7 +48,7 @@ $data_style = [
 ];
 $sheetname = "测试表";
 $data = [
-    ["senman" => "12qweqweqweqweqweqweqweqweqweqweqweqwe", "senman1" => "2qweqweqweqweqweqweqweqweqweqweqweqwe"],
+    ["senman" => "320723199403140000", "senman1" => "2qweqweqweqweqweqweqweqweqweqweqweqwe"],
 ];
 $phpexcel->export($data, "test.xlsx", $tableheader, $sheetname, 0, "./", $properties = [], $data_style);
 

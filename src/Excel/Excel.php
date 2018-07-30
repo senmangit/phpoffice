@@ -334,8 +334,8 @@ class Excel
             $j = 0;
             foreach ($data[$i - 2] as $key => $value) {
                 //是图片是加入图片到excel
-                if ($key == 'img') {
-                    if ($value != '') {
+                if ($key === 'img') {
+                    if ($value !== '') {
                         $value = iconv("UTF-8", "GB2312", $value); //防止中文命名的文件
                         // 图片生成
                         $objDrawing[$key] = new \ImagickDraw();

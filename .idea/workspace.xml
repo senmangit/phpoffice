@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="59e196aa-2da0-4fc5-a7b0-f35f1979d65b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/excel.php" afterPath="$PROJECT_DIR$/excel.php" />
-      <change beforePath="$PROJECT_DIR$/office.sh" afterPath="$PROJECT_DIR$/office.sh" />
+      <change beforePath="$PROJECT_DIR$/src/Excel/Excel.php" afterPath="$PROJECT_DIR$/src/Excel/Excel.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,24 +57,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="office.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="office.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/office.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+            <state relative-caret-position="683">
+              <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Excel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Excel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3825">
-              <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
+            <state relative-caret-position="386">
+              <caret line="337" column="33" lean-forward="false" selection-start-line="337" selection-start-column="33" selection-end-line="337" selection-end-column="33" />
               <folding>
                 <element signature="e#106#151#0#PHP" expanded="true" />
-                <element signature="e#17004#18629#0#PHP" expanded="false" />
+                <element signature="e#17006#18631#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -117,7 +116,7 @@
       <file leaf-file-name="excel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/excel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
+            <state relative-caret-position="850">
               <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
               <folding />
             </state>
@@ -150,9 +149,9 @@
         <option value="$PROJECT_DIR$/src/Word/WordToPdf.php" />
         <option value="$PROJECT_DIR$/word.php" />
         <option value="$PROJECT_DIR$/src/Word/PdfToImage.php" />
-        <option value="$PROJECT_DIR$/src/Excel/Excel.php" />
         <option value="$PROJECT_DIR$/excel.php" />
         <option value="$PROJECT_DIR$/office.sh" />
+        <option value="$PROJECT_DIR$/src/Excel/Excel.php" />
       </list>
     </option>
   </component>
@@ -164,9 +163,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="644" />
-    <option name="y" value="81" />
-    <option name="width" value="1275" />
+    <option name="x" value="272" />
+    <option name="y" value="34" />
+    <option name="width" value="1510" />
     <option name="height" value="849" />
   </component>
   <component name="ProjectView">
@@ -184,8 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,12 +211,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../crius" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -278,7 +277,9 @@
       <workItem from="1530837622102" duration="7400000" />
       <workItem from="1531095481332" duration="880000" />
       <workItem from="1531112003224" duration="599000" />
-      <workItem from="1531182993797" duration="1131000" />
+      <workItem from="1531182993797" duration="2420000" />
+      <workItem from="1531272884742" duration="677000" />
+      <workItem from="1532928921448" duration="20000" />
     </task>
     <task id="LOCAL-00001" summary="修改备注">
       <created>1529034000136</created>
@@ -560,17 +561,24 @@
       <option name="project" value="LOCAL" />
       <updated>1530868521698</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="引号错误">
+      <created>1531189443257</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1531189443257</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63372000" />
+    <option name="totallyTimeSpent" value="65358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.124200426" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12633263" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1877095" sideWeight="0.12899786" order="7" side_tool="true" content_ui="tabs" />
@@ -641,7 +649,8 @@
     <MESSAGE value="优化" />
     <MESSAGE value="自动行宽" />
     <MESSAGE value="表格宽度" />
-    <option name="LAST_COMMIT_MESSAGE" value="表格宽度" />
+    <MESSAGE value="引号错误" />
+    <option name="LAST_COMMIT_MESSAGE" value="引号错误" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -670,7 +679,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17004#18629#0#PHP" expanded="false" />
+            <element signature="e#17006#18631#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -745,7 +754,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17004#18629#0#PHP" expanded="false" />
+            <element signature="e#17006#18631#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -817,7 +826,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17004#18629#0#PHP" expanded="false" />
+            <element signature="e#17006#18631#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -868,7 +877,7 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17004#18629#0#PHP" expanded="false" />
+            <element signature="e#17006#18631#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1013,38 +1022,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#3160#4386#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3825">
-          <caret line="230" column="0" lean-forward="false" selection-start-line="230" selection-start-column="0" selection-end-line="230" selection-end-column="0" />
-          <folding>
-            <element signature="e#106#151#0#PHP" expanded="true" />
-            <element signature="e#17004#18629#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/excel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="850">
           <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding />
         </state>
@@ -1058,11 +1038,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/WordToPdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/PdfToImage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#3160#4386#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/office.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="40" column="29" lean-forward="false" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+        <state relative-caret-position="683">
+          <caret line="78" column="36" lean-forward="false" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Excel/Excel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="337" column="33" lean-forward="false" selection-start-line="337" selection-start-column="33" selection-end-line="337" selection-end-column="33" />
+          <folding>
+            <element signature="e#106#151#0#PHP" expanded="true" />
+            <element signature="e#17006#18631#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
